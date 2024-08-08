@@ -12,6 +12,32 @@
 }
 
 body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
 	font-size: 16px;
 	font-family: 'Red Hat Display', sans-serif;
+	height: 100vh;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: clamp(200px, 350px, 450px);
+	height: 500px;
+	border: solid 1px grey;
+	border-radius: 20px;
+}
+
+.attribution {
+	padding-top: 22px;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
 }
