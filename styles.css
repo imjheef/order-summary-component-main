@@ -5,10 +5,15 @@
 	--bright-blue: hsl(245, 75%, 52%);
 
 	/* Neutral */
-
+	--hover-state: hsl(256, 79%, 65%);
 	--very-pale-blue: hsl(225, 100%, 98%);
 	--desaturated-blue: hsl(224, 23%, 55%);
 	--dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Red Hat Display', sans-serif;
 }
 
 body {
@@ -18,23 +23,107 @@ body {
 	align-items: center;
 	box-sizing: border-box;
 	font-size: 16px;
-	font-family: 'Red Hat Display', sans-serif;
 	height: 100vh;
+	background: no-repeat url(./images/pattern-background-desktop.svg);
+	background-color: var(--pale-blue);
 }
 
 .card {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	width: clamp(200px, 350px, 450px);
-	height: 500px;
-	border: solid 1px grey;
+	width: clamp(300px, 90%, 450px);
 	border-radius: 20px;
+	box-shadow: var(--desaturated-blue) 2px 19px 20px -15px;
+	background-color: #fff;
+	overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.card p {
+	text-align: center;
+	padding: 0px 40px;
+}
+
+.wrapper {
+	display: flex;
+	height: 95px;
+	width: 80%;
+	margin: 24px 0;
+	border-radius: 12px;
+	background-color: var(--very-pale-blue);
+}
+
+.wrapper img {
+	margin: 0 20px;
+	object-fit: scale-down;
+}
+
+.wrapper div {
+	margin: auto;
+	height: 100px;
+	width: 100px;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper a {
+	margin: auto;
+	font-weight: 700;
+}
+
+.wrapper span:first-child {
+	font-weight: 700;
+}
+
+.wrapper span:nth-child(2) {
+	font-weight: 600;
+}
+
+.wrapper a:hover {
+	text-decoration: none;
+	color: var(--hover-state);
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	margin-bottom: 30px;
+	width: 80%;
+}
+
+button {
+	box-sizing: border-box;
+	background-color: transparent;
+	padding: 14px 16px;
+	border-radius: 14px;
+	border-style: none;
+	border-color: white;
+	font-weight: 700;
+}
+
+button:first-child {
+	background-color: var(--bright-blue);
+	color: white;
+}
+
+button:first-child:hover {
+	cursor: pointer;
+	background-color: var(--hover-state);
+	box-shadow: var(--bright-blue) 2px 19px 30px -20px;
+}
+
+button:nth-child(2) {
+	color: var(--desaturated-blue);
+}
+
+button:nth-child(2):hover {
+	color: var(--dark-blue);
+	cursor: pointer;
 }
 
 .attribution {
-	padding-top: 22px;
+	padding-top: 42px;
 	font-size: 11px;
 	text-align: center;
 }
