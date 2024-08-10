@@ -21,8 +21,6 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	box-sizing: border-box;
-	font-size: 16px;
 	height: 100vh;
 	background: no-repeat url(./images/pattern-background-desktop.svg);
 	background-color: var(--pale-blue);
@@ -32,51 +30,69 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: clamp(300px, 90%, 450px);
+	width: clamp(300px, 100%, 400px);
 	border-radius: 20px;
-	box-shadow: var(--desaturated-blue) 2px 19px 20px -15px;
+	box-shadow: var(--desaturated-blue) 0px 20px 30px -20px;
 	background-color: #fff;
-	overflow: hidden; /* Ensure content doesn't overflow */
+	overflow: hidden;
+}
+
+.card-img {
+	position: relative;
+	width: 100%;
+}
+
+.card h1 {
+	color: var(--dark-blue);
+	font-size: 24px;
+	font-weight: 900;
 }
 
 .card p {
 	text-align: center;
-	padding: 0px 40px;
+	width: 80%;
+	line-height: 1.6;
+	font-weight: 500;
+	font-size: 15px;
+	color: var(--desaturated-blue);
 }
 
 .wrapper {
 	display: flex;
-	height: 95px;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100px;
 	width: 80%;
-	margin: 24px 0;
+	margin-bottom: 20px;
 	border-radius: 12px;
 	background-color: var(--very-pale-blue);
 }
 
-.wrapper img {
-	margin: 0 20px;
-	object-fit: scale-down;
+.price {
+	width: 100px;
+	line-height: 1.6;
 }
 
-.wrapper div {
-	margin: auto;
-	height: 100px;
-	width: 100px;
-	display: flex;
-	flex-direction: column;
+.wrapper img {
+	width: 50px;
 }
 
 .wrapper a {
-	margin: auto;
+	align-self: center;
+	font-size: 15px;
 	font-weight: 700;
 }
 
-.wrapper span:first-child {
-	font-weight: 700;
+.price span:nth-child(1) {
+	font-weight: 900;
+	font-size: 15px;
+	color: var(--dark-blue);
 }
 
-.wrapper span:nth-child(2) {
+.price span:nth-child(2) {
+	font-size: 15px;
 	font-weight: 600;
+	color: var(--desaturated-blue);
 }
 
 .wrapper a:hover {
@@ -87,15 +103,15 @@ body {
 .buttons {
 	display: flex;
 	flex-direction: column;
-	gap: 18px;
-	margin-bottom: 30px;
+	gap: 14px;
+	margin-bottom: 20px;
 	width: 80%;
 }
 
 button {
 	box-sizing: border-box;
 	background-color: transparent;
-	padding: 14px 16px;
+	padding: 16px;
 	border-radius: 14px;
 	border-style: none;
 	border-color: white;
@@ -103,6 +119,7 @@ button {
 }
 
 button:first-child {
+	box-shadow: var(--bright-blue) 2px 19px 30px -20px;
 	background-color: var(--bright-blue);
 	color: white;
 }
